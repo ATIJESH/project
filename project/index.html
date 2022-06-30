@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	
+	<title>project</title> <link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.re{
+			    display: flex;
+			    justify-content: center;
+			    align-content: center;
+			    flex-wrap: wrap;
+			    flex-direction: column;
+			}
+			h1{
+				text-align: center;
+			}
+
+			.display-none{
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    flex-direction: column;
+			    gap:16px;
+			}
+			.web-cam-container{
+				margin: auto;
+
+			}
+			#web-cam-container {
+			    width: 412px;
+			    height: 332px;
+			}
+			video {
+    				width: 300px;
+    			}
+
+    			button#start-vid-recording {
+				    padding: 10px 15px;
+				    border-radius: 36px;
+				    background: darkseagreen;
+				    font-weight: 700;
+				    cursor: pointer;
+						}	
+
+						button#stop-vid-recording {
+							 padding: 10px 15px;
+							border-radius: 36px;
+							 background: darkseagreen;
+							 font-weight: 700;
+							 cursor: pointer;
+						}
+
+						div#vid-record-status {
+						    color: red;
+						    font-size: 25px;
+						}
+						.back{
+							background: url("C:/Users/Dinesh/Desktop/project/eberhard-grossgasteiger-x60_5x0E9Ko-unsplash.jpg");
+							background-repeat: repeat;
+							margin: auto;
+							padding: 50px;
+						}
+	</style>
+</head>
+
+<body>
+	<div class="back">
+	<div class="display-none" id="vid-recorder">
+		<h1>A project by vocso <br>
+			webcam
+		 </h1>
+		<video autoplay id="web-cam-container"
+			style="background-color: black;">
+			Your browser doesn't support
+			the video tag
+		</video>
+
+		<div class="recording" id="vid-record-status">
+			
+		</div>
+
+		<!-- This button will start the video recording -->	
+		<button type="button" id="start-vid-recording"
+			onclick="startRecording(this,
+			document.getElementById('stop-vid-recording'))">
+			"Start video recording" 
+		</button>
+
+		<!-- This button will stop the video recording -->
+		<button type="button" id="stop-vid-recording"
+			disabled onclick="stopRecording(this,
+			document.getElementById('start-vid-recording'))">
+			Stop video recording
+		</button>
+	</div>
+</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
